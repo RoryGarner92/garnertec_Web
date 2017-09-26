@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
 
 //**********************************/
-var maxRadius = 5;
+var maxRadius = 50;
 
 var colourArray = [
     '#3B4A4F',
@@ -20,10 +20,6 @@ var colourArray = [
 var mouse = {
     x: undefined,
     y: undefined
-}
-
-function changingImg(){
-    document.getElementById("y").src="./images/test2.png";
 }
 
 //event listener 
@@ -93,7 +89,7 @@ console.log(circleArray);
 var circleArray = [];
 function init() {
     circleArray = [];
-    for (var index = 0; index < 1000; index++) {
+    for (var index = 0; index < 3000; index++) {
         var radius = Math.random() * 1 + 1;
         var x = Math.random() * ((innerWidth - radius * 2) + radius);
         var y = Math.random() * ((innerHeight - radius * 2) + radius);

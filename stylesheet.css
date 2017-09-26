@@ -5,6 +5,8 @@
 
         body {
             backface-visibility: #eee;
+            background: white;
+			margin: 0;
         }
 
         .wrapper {
@@ -53,3 +55,14 @@
         button{
             size: 50px;
         }
+        canvas {
+			border: 1px solid black;
+		}
+
+		.backg {
+			background-color: black;
+		}
+
+		.navbar {
+			margin-bottom: 0px !important;
+		}
