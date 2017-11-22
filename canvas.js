@@ -1,8 +1,8 @@
-//creating a variable to be passed to the html as a container 
+//creating a variable to be passed to the html as a container
 var canvas = document.querySelector('canvas');
-//settting the size to the full width of the window 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+//settting the size to the full width of the window
+canvas.width = window.innerWidth * .98;
+canvas.height = window.innerHeight/3;
 //c refers th the variable "content"
 var c = canvas.getContext('2d');
 
@@ -22,7 +22,7 @@ var mouse = {
     y: undefined
 }
 
-//event listener 
+//event listener
 window.addEventListener('mousemove',
     function (event) {
         //   console.log(event);
@@ -30,7 +30,7 @@ window.addEventListener('mousemove',
         mouse.y = event.y;
     })
 
-//event listener 
+//event listener
 window.addEventListener('resize',
     function (event) {
         canvas.width = window.innerWidth;
@@ -38,7 +38,7 @@ window.addEventListener('resize',
         init();
     })
 
-// Creating a circle object    
+// Creating a circle object
 function Circle(x, y, dx, dy, radius) {
     this.x = x;
     this.y = y;
@@ -70,7 +70,7 @@ function Circle(x, y, dx, dy, radius) {
         this.x += this.dx;
         this.y += this.dy;
 
-        // interactivity 
+        // interactivity
         if (mouse.x - this.x < 50 && mouse.x - this.x > - 50
             && mouse.y - this.y < 50 && mouse.y - this.y > - 50) {
             if (this.radius < maxRadius) {
@@ -89,7 +89,7 @@ console.log(circleArray);
 var circleArray = [];
 function init() {
     circleArray = [];
-    for (var index = 0; index < 3000; index++) {
+    for (var index = 0; index < 300; index++) {
         var radius = Math.random() * 1 + 1;
         var x = Math.random() * ((innerWidth - radius * 2) + radius);
         var y = Math.random() * ((innerHeight - radius * 2) + radius);
